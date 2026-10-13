@@ -38,7 +38,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background">
       {/* Hero */}
-      <section className="bg-[#F4ECE0]/40">
+      <section className="bg-[#F4E2DC]/40">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="max-w-4xl">
             <p className="text-[11px] tracking-luxe uppercase text-primary mb-5">Our story</p>
@@ -80,8 +80,9 @@ export default function AboutPage() {
       </section>
 
       {/* Studio + Lab split */}
-      <section className="bg-foreground text-background py-16 sm:py-24">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+      <section className="bg-rose-gradient text-background py-16 sm:py-24 relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <p className="text-[11px] tracking-luxe uppercase text-white/50 mb-4">The studio</p>
@@ -134,7 +135,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-[#F4ECE0]/40 py-16 sm:py-24">
+      <section className="bg-[#F4E2DC]/40 py-16 sm:py-24">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-12">
             <p className="text-[11px] tracking-luxe uppercase text-primary mb-4">How we got here</p>
@@ -183,8 +184,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 sm:py-24 bg-foreground text-background">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
+      <section className="py-16 sm:py-24 bg-rose-gradient text-background relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 text-center relative">
           <h2 className="font-serif text-3xl sm:text-5xl text-white leading-tight text-balance max-w-3xl mx-auto">
             Try the range, find the ones your skin asks for.
           </h2>
@@ -193,7 +195,7 @@ export default function AboutPage() {
           </p>
           <button
             onClick={() => navigate({ name: "shop" })}
-            className="group mt-10 inline-flex items-center gap-3 px-8 py-4 bg-white text-[#221C18] text-[12px] tracking-luxe uppercase hover:bg-[#E5D9C5] transition"
+            className="group mt-10 inline-flex items-center gap-3 px-8 py-4 bg-white text-[#2D1B20] text-[12px] tracking-luxe uppercase hover:bg-[#E8D2CC] transition"
           >
             Shop the range
             <ArrowRight size={14} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />

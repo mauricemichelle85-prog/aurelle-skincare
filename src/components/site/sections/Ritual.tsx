@@ -29,11 +29,14 @@ const STEPS = [
 
 export default function Ritual() {
   return (
-    <section className="py-20 sm:py-28 bg-foreground text-background">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+    <section className="py-20 sm:py-28 bg-rose-gradient text-background relative overflow-hidden">
+      {/* Decorative gold accents */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative">
         <div className="grid lg:grid-cols-12 gap-10 mb-12 sm:mb-16">
           <div className="lg:col-span-7">
-            <p className="text-[11px] tracking-luxe uppercase text-white/50 mb-4">The four-step routine</p>
+            <p className="text-[11px] tracking-luxe uppercase text-accent mb-4">The four-step routine</p>
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.5rem] leading-[1.08] text-balance">
               Skincare should fit your morning, not the other way around.
             </h2>
@@ -47,11 +50,11 @@ export default function Ritual() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
           {STEPS.map((step) => (
-            <div key={step.num} className="bg-foreground p-7 sm:p-8 flex flex-col">
-              <p className="font-serif text-4xl sm:text-5xl text-white/30 mb-6">{step.num}</p>
+            <div key={step.num} className="bg-foreground/95 p-7 sm:p-8 flex flex-col hover:bg-foreground transition">
+              <p className="font-serif text-4xl sm:text-5xl text-accent/60 mb-6">{step.num}</p>
               <h3 className="font-serif text-xl sm:text-2xl text-white mb-3">{step.title}</h3>
               <p className="text-sm sm:text-base text-white/70 leading-relaxed flex-1">{step.description}</p>
-              <p className="text-[11px] tracking-wide-luxe uppercase text-white/50 mt-6 pt-5 border-t border-white/10">
+              <p className="text-[11px] tracking-wide-luxe uppercase text-accent/80 mt-6 pt-5 border-t border-white/10">
                 {step.product}
               </p>
             </div>

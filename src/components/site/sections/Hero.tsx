@@ -57,6 +57,8 @@ export default function Hero() {
 
           {/* Right: image */}
           <div className="order-1 lg:order-2 relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-auto lg:h-[80vh] bg-muted overflow-hidden">
+            {/* Decorative gold frame */}
+            <div className="absolute inset-3 sm:inset-4 border border-accent/40 z-10 pointer-events-none" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={EDIT.heroMain}
@@ -64,7 +66,7 @@ export default function Hero() {
               className="w-full h-full object-cover animate-slow-zoom"
             />
             {/* Floating caption card */}
-            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 sm:max-w-xs bg-background/95 backdrop-blur-sm p-5 sm:p-6 shadow-[0_8px_40px_rgba(34,28,24,0.12)]">
+            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 sm:max-w-xs bg-background/95 backdrop-blur-md p-5 sm:p-6 shadow-luxe-lg border-t-2 border-accent">
               <p className="text-[10px] tracking-luxe uppercase text-primary mb-2">Featured</p>
               <p className="font-serif text-lg sm:text-xl text-foreground leading-tight">
                 Radiance Renewal Serum
@@ -84,7 +86,7 @@ export default function Hero() {
       </div>
 
       {/* Marquee strip */}
-      <div className="border-t border-border bg-[#F4ECE0] overflow-hidden">
+      <div className="border-t border-border bg-[#F4E2DC] overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap py-4">
           {[...Array(2)].map((_, idx) => (
             <div key={idx} className="flex items-center gap-12 px-6 text-[11px] tracking-luxe uppercase text-foreground/70">

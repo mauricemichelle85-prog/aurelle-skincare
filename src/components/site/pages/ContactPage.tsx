@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <div className="bg-background">
       {/* Hero */}
-      <section className="bg-[#F4ECE0]/40">
+      <section className="bg-[#F4E2DC]/40">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="max-w-3xl">
             <p className="text-[11px] tracking-luxe uppercase text-primary mb-5">Say hello</p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
 
               <div className="mt-10 space-y-7">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#F4ECE0] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F4E2DC] flex items-center justify-center flex-shrink-0">
                     <Mail size={16} className="text-primary" />
                   </div>
                   <div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#F4ECE0] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F4E2DC] flex items-center justify-center flex-shrink-0">
                     <Phone size={16} className="text-primary" />
                   </div>
                   <div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#F4ECE0] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F4E2DC] flex items-center justify-center flex-shrink-0">
                     <MapPin size={16} className="text-primary" />
                   </div>
                   <div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#F4ECE0] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F4E2DC] flex items-center justify-center flex-shrink-0">
                     <Clock size={16} className="text-primary" />
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#F4ECE0] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F4E2DC] flex items-center justify-center flex-shrink-0">
                     <Instagram size={16} className="text-primary" />
                   </div>
                   <div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="lg:col-span-7">
-              <div className="bg-[#FBF8F2] border border-border p-6 sm:p-10">
+              <div className="bg-[#FBF4F1] border border-border p-6 sm:p-10">
                 <h3 className="font-serif text-2xl sm:text-3xl text-foreground mb-2">Send us a message</h3>
                 <p className="text-sm text-muted-foreground mb-8">Fill in what you can. We will write back within one business day.</p>
 
@@ -215,7 +215,7 @@ export default function ContactPage() {
               <p className="mt-5 text-base text-muted-foreground leading-relaxed">
                 We share the studio space with two other small businesses. If you would like to visit, please write ahead and we will make sure someone is here to show you around and answer questions about the range.
               </p>
-              <div className="mt-6 p-5 bg-[#FBF8F2] border border-border">
+              <div className="mt-6 p-5 bg-[#FBF4F1] border border-border">
                 <p className="font-serif text-lg text-foreground">{BRAND.name} Studio</p>
                 <p className="text-sm text-muted-foreground mt-2">{BRAND.address}</p>
                 <p className="text-sm text-muted-foreground mt-1">{BRAND.hours}</p>
@@ -223,7 +223,7 @@ export default function ContactPage() {
             </div>
             <div className="lg:col-span-7">
               {/* Map illustration */}
-              <div className="relative aspect-[16/10] bg-[#F4ECE0] overflow-hidden">
+              <div className="relative aspect-[16/10] bg-[#F4E2DC] overflow-hidden">
                 <div className="absolute inset-0 bg-grain" />
                 {/* Schematic "map" lines */}
                 <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">

@@ -26,7 +26,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t, idx) => (
             <figure
               key={idx}
-              className="bg-[#FBF8F2] border border-border p-6 sm:p-7 flex flex-col"
+              className="bg-[#FBF4F1] border border-border p-6 sm:p-7 flex flex-col"
             >
               <Quote size={24} strokeWidth={1.5} className="text-primary mb-5" />
               <blockquote className="text-sm sm:text-base text-foreground/80 leading-relaxed flex-1 italic">

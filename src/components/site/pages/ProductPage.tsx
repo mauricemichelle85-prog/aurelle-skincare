@@ -243,7 +243,7 @@ export default function ProductPage({ slug }: { slug: string }) {
       </section>
 
       {/* Related */}
-      <section className="bg-[#F4ECE0]/40 py-14 sm:py-20">
+      <section className="bg-[#F4E2DC]/40 py-14 sm:py-20">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="flex items-end justify-between mb-10 sm:mb-14">
             <div>

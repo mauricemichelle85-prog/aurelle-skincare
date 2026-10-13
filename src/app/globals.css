@@ -46,38 +46,49 @@
 
 :root {
   --radius: 0.25rem;
-  /* AURELLE brand palette: warm ivory, deep espresso, champagne gold, soft terracotta */
-  --background: #FAF6F0;
-  --foreground: #221C18;
+  /* AURELLE luxury pink palette: blush ivory + deep aubergine + champagne gold + dusty rose */
+  --background: #FAEDE7;
+  --foreground: #2D1B20;
   --card: #FFFFFF;
-  --card-foreground: #221C18;
+  --card-foreground: #2D1B20;
   --popover: #FFFFFF;
-  --popover-foreground: #221C18;
-  --primary: #8B6F4E;
-  --primary-foreground: #FBF8F2;
-  --secondary: #F0E7D8;
-  --secondary-foreground: #2D2520;
-  --muted: #F4ECE0;
-  --muted-foreground: #6E5F52;
-  --accent: #B8946A;
-  --accent-foreground: #FBF8F2;
+  --popover-foreground: #2D1B20;
+  --primary: #A87C8A;
+  --primary-foreground: #FBF4F1;
+  --secondary: #F2DFD8;
+  --secondary-foreground: #2D1B20;
+  --muted: #F4E2DC;
+  --muted-foreground: #8A6B70;
+  --accent: #C9A66B;
+  --accent-foreground: #FBF4F1;
   --destructive: #B33A2A;
-  --border: #E5D9C5;
-  --input: #E5D9C5;
-  --ring: #8B6F4E;
-  --chart-1: #8B6F4E;
-  --chart-2: #B8946A;
-  --chart-3: #C58B6B;
-  --chart-4: #9CA88E;
-  --chart-5: #6E5F52;
-  --sidebar: #FBF8F2;
-  --sidebar-foreground: #221C18;
-  --sidebar-primary: #8B6F4E;
-  --sidebar-primary-foreground: #FBF8F2;
-  --sidebar-accent: #F4ECE0;
-  --sidebar-accent-foreground: #2D2520;
-  --sidebar-border: #E5D9C5;
-  --sidebar-ring: #8B6F4E;
+  --border: #E8D2CC;
+  --input: #E8D2CC;
+  --ring: #A87C8A;
+  --chart-1: #A87C8A;
+  --chart-2: #C9A66B;
+  --chart-3: #D4A5A5;
+  --chart-4: #8E6A6F;
+  --chart-5: #6B4A50;
+  --sidebar: #FBF4F1;
+  --sidebar-foreground: #2D1B20;
+  --sidebar-primary: #A87C8A;
+  --sidebar-primary-foreground: #FBF4F1;
+  --sidebar-accent: #F4E2DC;
+  --sidebar-accent-foreground: #2D1B20;
+  --sidebar-border: #E8D2CC;
+  --sidebar-ring: #A87C8A;
+
+  /* Brand-specific tokens */
+  --brand-pink-50: #FDF5F2;
+  --brand-pink-100: #FAEDE7;
+  --brand-pink-200: #F4E2DC;
+  --brand-pink-300: #E8D2CC;
+  --brand-pink-400: #D4A5A5;
+  --brand-rose: #A87C8A;
+  --brand-rose-deep: #6B4A50;
+  --brand-gold: #C9A66B;
+  --brand-aubergine: #2D1B20;
 }
 
 @layer base {
@@ -92,10 +103,14 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(at 8% 12%, rgba(168, 124, 138, 0.06) 0px, transparent 50%),
+      radial-gradient(at 92% 88%, rgba(201, 166, 107, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
   }
   ::selection {
-    background: #8B6F4E;
-    color: #FBF8F2;
+    background: #A87C8A;
+    color: #FBF4F1;
   }
 }
 
@@ -118,9 +133,15 @@
   .text-balance {
     text-wrap: balance;
   }
-  .bg-grain {
-    background-image: radial-gradient(rgba(139, 111, 78, 0.05) 1px, transparent 1px);
-    background-size: 16px 16px;
+  .bg-grain-pink {
+    background-image: radial-gradient(rgba(168, 124, 138, 0.06) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .bg-blush-gradient {
+    background: linear-gradient(135deg, #FAEDE7 0%, #F4E2DC 100%);
+  }
+  .bg-rose-gradient {
+    background: linear-gradient(180deg, #A87C8A 0%, #6B4A50 100%);
   }
   .hover-underline {
     background-image: linear-gradient(currentColor, currentColor);
@@ -138,6 +159,12 @@
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  .shadow-luxe {
+    box-shadow: 0 2px 24px rgba(45, 27, 32, 0.04), 0 1px 4px rgba(45, 27, 32, 0.03);
+  }
+  .shadow-luxe-lg {
+    box-shadow: 0 12px 48px rgba(45, 27, 32, 0.08), 0 4px 12px rgba(45, 27, 32, 0.04);
   }
 }
 
@@ -166,4 +193,15 @@
 }
 .animate-slow-zoom {
   animation: slowZoom 12s ease-out forwards;
+}
+
+/* Shimmer for accents */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(201, 166, 107, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
 }

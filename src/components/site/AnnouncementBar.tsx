@@ -20,7 +20,8 @@ export default function AnnouncementBar() {
   }, []);
 
   return (
-    <div className="bg-[#221C18] text-[#FBF8F2] text-[11px] sm:text-xs tracking-wide-luxe uppercase">
+    <div className="bg-rose-gradient text-[#FBF4F1] text-[11px] sm:text-xs tracking-wide-luxe uppercase relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 h-9 flex items-center justify-center text-center">
         <span key={index} className="animate-fade-up">{messages[index]}</span>
       </div>

@@ -10,7 +10,7 @@ export default function Bestsellers() {
   const bestsellers = PRODUCTS.filter((p) => p.bestseller).slice(0, 4);
 
   return (
-    <section className="py-16 sm:py-24 bg-[#F4ECE0]/40">
+    <section className="py-16 sm:py-24 bg-[#F4E2DC]/40">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <p className="text-[11px] tracking-luxe uppercase text-primary mb-3">Loved by customers</p>

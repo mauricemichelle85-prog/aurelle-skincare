@@ -22,42 +22,43 @@ export type Product = {
   howToUse: string;
 };
 
-// Curated Unsplash photo IDs (real, reachable images)
+// Curated image URLs (verified reachable via ZAI image search)
 const IMG = {
-  serumBottle: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80",
-  serumDropper: "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=800&auto=format&fit=crop&q=80",
-  faceCream: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&auto=format&fit=crop&q=80",
+  // Product shots (ZAI image-search hosted, guaranteed reachable)
+  serumBottle: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/65d1889572d3.jpg",
+  serumDropper: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1bf8013b7e74.jpg",
+  faceCream: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c59a76bd4a7a.jpg",
   cleanser: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop&q=80",
   clayMask: "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=800&auto=format&fit=crop&q=80",
-  faceOil: "https://images.unsplash.com/photo-1631730358677-3adaf7d2c4a6?w=800&auto=format&fit=crop&q=80",
+  faceOil: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/68cb5f111c3f.jpg",
   eyeCream: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&auto=format&fit=crop&q=80",
-  tonerMist: "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=800&auto=format&fit=crop&q=80",
-  lipBalm: "https://images.unsplash.com/photo-1599733589046-8e1a8c16c9b3?w=800&auto=format&fit=crop&q=80",
+  tonerMist: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/da963794b51b.jpg",
+  lipBalm: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6aa9e47d0b11.jpg",
   sunscreen: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&auto=format&fit=crop&q=80",
   gelCleanser: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&auto=format&fit=crop&q=80",
   vitaminCPads: "https://images.unsplash.com/photo-1601612628452-9e99ced43524?w=800&auto=format&fit=crop&q=80",
 };
 
-// Lifestyle & editorial images
+// Lifestyle & editorial images (verified reachable)
 const EDIT = {
-  heroMain: "https://images.unsplash.com/photo-1596755380777-7a7a1c4f0c8e?w=1600&auto=format&fit=crop&q=80",
-  heroAlt: "https://images.unsplash.com/photo-1559599101-f09822d49aa0?w=1600&auto=format&fit=crop&q=80",
+  heroMain: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ee284d553dc2.jpg",
+  heroAlt: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/502101be999a.jpg",
   editorial1: "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=1200&auto=format&fit=crop&q=80",
   editorial2: "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1200&auto=format&fit=crop&q=80",
   storyLab: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=1400&auto=format&fit=crop&q=80",
   storyRitual: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=1400&auto=format&fit=crop&q=80",
-  storyFounder: "https://images.unsplash.com/photo-1594744803329-4c1b4f0d1d3a?w=1200&auto=format&fit=crop&q=80",
-  aboutLab: "https://images.unsplash.com/photo-1583241506808-c6f8b1c4d4a1?w=1400&auto=format&fit=crop&q=80",
-  aboutStudio: "https://images.unsplash.com/photo-1631730358677-3adaf7d2c4a6?w=1400&auto=format&fit=crop&q=80",
+  storyFounder: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0288bb4a0343.jpg",
+  aboutLab: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f0755d60d2bb.jpeg",
+  aboutStudio: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9c91d68a1075.jpg",
   aboutIngredients: "https://images.unsplash.com/photo-1607602132700-0682585a7d3c?w=1400&auto=format&fit=crop&q=80",
   aboutTeam: "https://images.unsplash.com/photo-1607602132700-0682585a7d3c?w=1400&auto=format&fit=crop&q=80",
   ritualBowl: "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=1200&auto=format&fit=crop&q=80",
   inst1: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80",
-  inst2: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=80",
-  inst3: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&auto=format&fit=crop&q=80",
-  inst4: "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=600&auto=format&fit=crop&q=80",
-  inst5: "https://images.unsplash.com/photo-1631730358677-3adaf7d2c4a6?w=600&auto=format&fit=crop&q=80",
-  inst6: "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=600&auto=format&fit=crop&q=80",
+  inst2: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/65d1889572d3.jpg",
+  inst3: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c59a76bd4a7a.jpg",
+  inst4: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/68cb5f111c3f.jpg",
+  inst5: "https://images.unsplash.com/photo-1599751449128-eb7249c3d6b1?w=600&auto=format&fit=crop&q=80",
+  inst6: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&auto=format&fit=crop&q=80",
 };
 
 export const PRODUCTS: Product[] = [

@@ -8,7 +8,9 @@ export default function Footer() {
   const navigate = useSiteStore((s) => s.navigate);
 
   return (
-    <footer className="bg-[#221C18] text-[#FBF8F2] mt-auto">
+    <footer className="bg-rose-gradient text-[#FBF4F1] mt-auto relative overflow-hidden">
+      {/* Decorative gold top accent */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
       {/* Newsletter strip */}
       <div className="border-b border-white/10">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-14 sm:py-20">
@@ -37,7 +39,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="h-14 px-8 bg-white text-[#221C18] text-[12px] tracking-luxe uppercase hover:bg-[#E5D9C5] transition whitespace-nowrap"
+                className="h-14 px-8 bg-white text-[#2D1B20] text-[12px] tracking-luxe uppercase hover:bg-[#E8D2CC] transition whitespace-nowrap"
               >
                 Join the list
               </button>
