@@ -63,3 +63,4 @@ screenshot-*.png
 .zscripts/dev.pid
 db/*.db
 db/*.db-journal
+.netlify/
